@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - 후손과 자식 요소의 접근 제어</title>
+    <script src="./jquery.min.js"></script>
+</head>
+<body>
+    <section class="container">
+        <h1>후손과 자식 요소의 접근 제어</h1>
+        <p>
+            <em>one </em> <em>two </em> <span><em>three </em></span>
+        </p>
+        <div>
+            <em><ins>four </ins></em> <span><em>five </em></span> <em><ins>six </ins></em>
+        </div>        
+    </section><br><hr><br>
+    <div>
+    <span> ancestor descendant로 검색된 엘리먼트 : </span><span class="result1"></span>
+    </div>
+    <div>
+        <span>parent &gt; child로 검색된 엘리먼트 : </span><span class="result2"></span>
+    </div>
+    <div>
+        <span>html로 불러오기 : </span><span class="result3"></span>
+    </div>
+    <script>
+        $(function(){
+            //클래스가 result인 곳에 p의 후손 요소인 em에 text를 출력하시오
+            var res1 = "";
+            $("p em").each(function(){
+                res1 += $(this).text();
+            });
+            $(".result1").text(res1);
+            //클래스가 result2인 곳에 div 자식 요소인 em의 text를 출력하시오
+            var res2 = "";
+            $("div > em").each(function(){
+            //$().each(function("div > em"){ 
+            //$.each("div > em", function(){ 모두 다 사용 가능함
+                res2 += $(this).text();
+            });
+            $(".result2").text(res2);
+            //태그까지 포함하기 text -> html로 바꾸기 
+            var res3 = "";
+            $("div > em").each(function(){
+                res3 += $(this).html();
+            });
+            $(".result3").html(res3);
+        });
+    </script>
+</body>
+</html>

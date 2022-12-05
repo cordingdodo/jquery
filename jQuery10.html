@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 - </title>
+    <script src="./jquery.min.js"></script>
+</head>
+<style> 
+.textstyle { color : skyblue; font-weight: bold; background-color: pink ;}
+    </style>
+<body>
+    <section class="container">
+        <h1>후(:gt()) 혹은 전(:lt())에 위치한 요소</h1>
+        <table>
+            <tr><td>zero</td></tr><tr><td>one</td></tr>
+            <tr><td>two</td></tr><tr><td>three</td></tr>
+            <tr><td>four</td></tr><tr><td>five</td></tr>
+        </table>
+    </section><br><hr><br>
+    <script>
+    $(document).ready(function(){
+        //모두 인덱스로 움직임
+        //eq(index) lt(index) ?이건확인 gt(index)
+        //td의 3번째 후 요소에 글자색을 빨강으로 변경
+        $("td:gt(2)").css("color", "red"); //세번째 포함되지 않아서 2라고 씀
+        //td의 5번째 전 요소에 textstyle 클래스를 부여
+        $("td:lt(4)").addClass("textstyle"); //4가 포함되지 않아야 해서 4라고 씀
+    });
+    </script>
+</body>
+</html>
