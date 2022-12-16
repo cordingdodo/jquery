@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 45- </title>
+    <script src="./jquery.min.js"></script>
+</head>
+<style>
+   </style>
+<script>
+$(document).ready(function(){
+    var cnt =0;
+   //img 요소를 클릭하면 클릭된 이미지 1.5배 커지게 하시오 (이벤트 작동 3 번만)
+    $("img").bind("click", function(event){ 
+        var $t = $(event.target);
+        $t.width($t.width()*1.5);
+        cnt++;
+        if(cnt >= 3){
+            $t.unbind(); //on을 썼다면 이부분은 off
+        }
+    });
+});
+</script>
+<body>
+    <section class="container">
+        <h1>범용 이벤트 제거 메소드 - unbind(), off()</h1>
+        <article class="data">
+                <img src="./1.jpg" id="pic1">
+            </ul><img />
+        </article>
+</section><br><hr><br>
+</body>
+</html>

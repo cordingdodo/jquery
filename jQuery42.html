@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 42- </title>
+    <script src="./jquery.min.js"></script>
+</head>
+<style>
+   </style>
+<script>
+$(document).ready(function(){
+   //img 요소에 마우스 포인털르 올리면, 1.jpg를 적용하고, 마우스  포인터가 내려가면, 2.jpg를 적용하며, 크릭시에는 주의 메세지 출력
+    $("img").bind({ //on으로바꿔도 동일
+        moseover:function(){ $(this).attr("src", "1.jpg"); },
+        mouseout:function(){ $(this).attr("src", "2.jpg"); },
+        click:function() {alert("우리 희찬이 ㅜ ㅜ");}
+
+    });
+//개별 이벤트 메소드를 적용할 경우
+//$("img").mouseover(function(){ ... }
+});
+</script>
+<body>
+    <section class="container">
+        <h1>범용 이벤트 적용 메소드 - bind(), on()</h1>
+        <article class="data">
+                <img src="./1.jpg" id="pic1">
+            </ul><img />
+        </article>
+</section><br><hr><br>
+</body>
+</html>

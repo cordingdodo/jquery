@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 35 - </title>
+    <script src="./jquery.min.js"></script>
+</head>
+<script>
+$(document).ready(function(){
+//p요소를 클릭하면, <div class='border'>불금 파이팅~!</div>을 각 각의 p요소 부모 요소로 추가
+    $("p").click(function(){
+        $("p").wrap("<div class='border'>불금 파이팅~!</div>");
+        //$("p").wrapAll("<div class='border'>불금 파이팅~!</div>");
+    });             //$("p").wrap($(".indata1"));
+});
+
+
+
+</script>
+<body>
+    <section class="container">
+        <h1> 부모 요소 추가 메소드 - wrap(), wrapAll()</h1>
+    <article id="data">
+        <h2>jquery After Third part -> 312 </h2>
+        <p> React -> 37</p>
+        <div>    <p>VUE.js -> 1</p>     </div>
+        <p>angular -> 54</p>
+        <p>polymer -> 3</p>
+    </article>
+</section>
+
+    
+</body>
+</html>

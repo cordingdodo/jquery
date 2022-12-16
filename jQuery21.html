@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 21 -  </title>
+    <script src="./jquery.min.js"></script>
+</head>
+<style>
+    .gbor { border: 10px solid pink; transition-duration: 0.8s;}
+    .bbor { border: 10px solid orange; transition-duration: 0.8s;}
+    .rbor { border: 10px solid skyblue; transition-duration: 0.8s;}
+    img { width: 300px; height: auto;}
+</style>
+<body>
+    <section class="container">
+        <h1>기본 메소드 -  </h1>
+        <article class="data">
+            <button>선색 변경</button><br>
+            <img src="./jRm.jpg" alt="중꺽마" class="img1 gbor"><br>
+            <img src="./img/son.jpg" alt="son" class="img1 bbor"><br>
+            <img src="./img/16.jpg" alt="16강" class="img1 rbor">
+        </article>
+    </section><br><hr><br>
+    <script>
+        $(document).ready(function(){
+            var sw = true;
+            //버튼을 클릭하면, img1 클래스의 img 요소에 .gbor, .bbor, .rbor을 교대로 적용
+            $("button").click(function(){
+                $(".img1").each(function(){
+                    if($(this).hasClass("gbor")){
+                        $(this).removeClass("gbor").addClass("bbor");
+                    } else if($(this).hasClass("bbor")){
+                        $(this).removeClass("bbor").addClass("rbor");
+                    } else {
+                        $(this).removeClass("rbor").addClass("gbor");
+                    }                    
+                });             
+            });
+        });
+    </script>
+</body>
+</html>

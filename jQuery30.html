@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 30 - </title>
+    <script src="./jquery.min.js"></script>
+</head>
+<script>
+    //클래스가 yw인 요소의 글자색을 짙은 하늘색으로 설정, 그 형제들의 글자색은 빨강으로 하며,
+    //그 형제들의 개수를 구하여 p요소의 내부 요소인 u 요소의 텍스트로 출력
+    $(document).ready(function(){
+        var len = $(".yw").css("color", "deepskyblue").siblings().css("color", "red").length;
+        $("p u").text(len);
+    });
+</script>
+<body>
+    <section class="container">
+        <h1> 선택자 형제 요소 선택 메소드 - siblings()</h1>
+        <article class="data">
+            <ul>
+                <li>하나</li>  <li>둘</li>  <li class="yw">셋</li>   <li>넷</li>
+            </ul>
+            <ul>
+                <li>다섯</li>  <li>여섯</li>  <li>일곱</li>   
+            </ul>
+            <ul>
+                <li>여덟</li>  <li class="yw">아홉</li>  <li>열</li>   <li>열하나</li>
+            </ul>
+            <p>찾은 형제 엘리먼트의 개수 : <u></u>개</p>
+        </article>
+    </section>
+</body>
+</html>

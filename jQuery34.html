@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 34 - </title>
+    <script src="./jquery.min.js"></script>
+</head>
+<script>
+$(document).ready(function(){
+    //문서가 로딩되면, <div class="container">니가 좋아하는 사람: 손흥민</div>요소를 
+    //$("header").after("<div class='container'>니가 좋아하는 사람: 손흥민</div>");
+    $("<div class='container'>니가 좋아하는 사람: 손흥민</div>").insertAfter($("header"));
+
+    $("header").after($("#data1"));
+    //문서가 로딩되면, <div class="container">니가 좋아한느 사람: 황희찬</div> 요소룰 footer의 이전(형=prev요소로 추가함)
+    //$("footer").before("<div class='container'>니가 좋아하는 사람: 황희찬</div>")
+    $("<div class='container'>니가 좋아하는 사람: 황희찬</div>").insertBefore($("footer"));
+});
+
+
+
+</script>
+<body>
+    <header><h1> 오늘은 불금~! 함께 공부할 </h1></header>
+    <section class="container">
+        <h1>형제 추가 메소드 - before(), insertBefore(), after(), insertAfter()</h1>
+    </section><br><hr><br>
+    <article id="data1">데이터1</article>
+    <footer><h3> <em> copyright kdy </em></h3></footer>
+
+    
+</body>
+</html>

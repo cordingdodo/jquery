@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 48- </title>
+    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
+</head>
+<style>
+   </style>
+<script>
+$(document).ready(function(){
+    //p 요소를 클릭하면, 클릭된 p 요소 다음(동생) 요소로 "<p>Another paragraph! </p>가 추가되도록
+    //하시오 (단, 새로 추가된 p 요소에도 이벤트가 상속되어야 함)
+    $("p").live("click", function(){
+        $(this).after("<p>Another paragraph! </p>");
+    });
+});
+</script>
+<body>
+    <section class="container">
+        <h1>이벤트 위임(상속) 메소드 - live()</h1>
+        <p>1.9미만 버전에서만 사용 가능함</p>
+        <article class="data">
+                <p>Click me!</p>
+        </article>
+</section><br><hr><br>
+</body>
+</html>

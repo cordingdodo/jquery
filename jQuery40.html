@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 40- </title>
+    <script src="./jquery.min.js"></script>
+</head>
+<style>
+    .container { clear: both; width: 100px; margin: 20px auto;}
+    .container:after { content: ""; display:block; clear: both;}
+    .data { clear: both; }
+    .data:after { content:""; display: block; clear: both;}
+    p {width: 200px; height: 60px; margin: 20px; text-align: center; background-color: red; cursor: pointer; color: white; line-height: 60px;}
+</style>
+<script>
+$(document).ready(function(){
+    //마진을 포함한 높이를 구하여 아이디가 res2인 곳에 출력
+    var p = $("p:first");
+    $("#res1").text("width Size : "+p.outerWidth()+", Margin Include Size : "+p.outerWidth(true));
+    $("#res2").text("height Size : "+p.outerHeight()+", Margin Include Size : "+p.outerHeight(true));
+});
+</script>
+<body>
+    <section class="container">
+        <h1>엘리먼트의 마진을 포함한 크기 - outerWidth(), outerHeight()</h1>
+        <article class="data">
+            <p>Hello~! heechan</p>
+        </article>
+        <div id="res1"></div> <div id="res2"></div>
+</section><br><hr><br>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 44- </title>
+    <script src="./jquery.min.js"></script>
+</head>
+<style>
+   </style>
+<script>
+$(document).ready(function(){
+   //img 요소를 클릭하면 클릭된 이미지 5배 커지게 하시오 (이벤트 작동 한 번만)
+    $("img").one("click", function(event){ 
+        var $t = $(this);
+        $t.width($t.width()*5);
+    });
+});
+</script>
+<body>
+    <section class="container">
+        <h1>범용 이벤트 적용 메소드 - one()</h1>
+        <article class="data">
+                <img src="./1.jpg" id="pic1">
+            </ul><img />
+        </article>
+</section><br><hr><br>
+</body>
+</html>

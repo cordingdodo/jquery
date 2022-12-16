@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28 - </title>
+    <script src="./jquery.min.js"></script>
+</head>
+<script>
+$(function(){
+    //버튼 누르면
+    $("button").click(function(){
+        $(this).next("div").css("background", "yellow"); //눌러진 버튼 다음요소 배경색 노랑
+        $(this).prev("div").css("background", "red"); //눌려진 버튼 이전요소 배경색 빨강
+        $("div").next().addClass("after"); //div 다음 요소에 after 클래스 적용
+        $("div").nextAll(".middle").addClass("sel"); //div 다음 요소들 중에서 middle 클래스 있는 요소 sel 클래스 적용
+        $("div").prev("span").css("color", "orange"); //div 전 요소가 span이면 글자색 오렌지색
+        $("div").prevAll().css("padding", "25px"); //div 전 요소들 padding값 25px 설정
+    });
+});
+</script>
+<body>
+    <section class="container">
+        <h1>선택자 다음/이전 요소 선택 메소드 - next(), prev()</h1>
+        <article class="data">
+            <button> 바로 아래 형제 엘리먼트 스타일 입히기1 </button>
+            <div id="first">first</div>
+            <span id="second" class="middle">
+                sibling1    <div id="child"></div>
+            </span>
+        <div id="third" class="middle">sibling2</div>
+        <span id="fourth" class="middle">sibling3</span>
+        <span id="fifth" class="middle">sibling4</span>
+        <div id="sixth">las</div>
+        <button>바로 위 형제 엘리먼트에 스타일 입히기1</button>
+        </article>
+    </section><br><hr><br>
+</body>
+</html>

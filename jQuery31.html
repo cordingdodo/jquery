@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 31 - </title>
+    <script src="./jquery.min.js"></script>
+</head>
+<script>
+$(document).ready(function(){
+//문서가 로딩되면, b 요소의 조상에 해당하는 요소의 태그들을 모두 배열로 저장한 후에,
+//b 요소의 자식 요소로 추가하여 설정
+var res1 = new Array();
+$("b").parents().each(function(i){
+    res1[i] = this.tagName; //이거는 자바 스크립트임
+});
+$("b").append(res1.reverse().join(", "));
+//문서가 로딩되면 u 요소의 부모에 해당하는 요소에 글자색을 핑크로 설정
+var res2 = new Array();
+$("u").parent().css("color", "pink").each(function(i){
+    res2[i] = this.tagName;
+});
+$("u").append(res2.join(", "));
+});
+</script>
+<body>
+    <header id="hd">헤더 구역</header>
+    <section class="container">
+        <h1>선택자 부모/조상 선택 메소드 - parent(), parents()</h1>
+        <article class="data">
+            <p>
+                <span>여기는 <b>부모/조상 엘리먼트 모두 검색 :</b></span>
+            </p>
+            <div>
+                <span>여기는 <u> 부모 엘리먼트만 검색 : </u></span>
+            </div>
+        </article>
+    </section><br><hr><br>
+    <footer id="tf">푸터 구역</footer>
+
+    
+</body>
+</html>

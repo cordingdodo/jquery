@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 59   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script> - </title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script> 
+    <style>
+    .container { clear:both; width:1000px; margin:20px auto; } 
+    .container:after { content:""; display:block; clear:both; }
+    .data { clear: both; }
+    .data:after { content:""; display:block; clear:both; } 
+    input { display:block; width:900px; height:48px; line-height: 48px; 
+    font-size:30px; }
+    .lst, .btnFrame {margin:30px auto; width: 600px; clear: both;}
+    .lst li {display:none; float: left; margin-left: 10px;} 
+    .txt { clear:both; text-align: center;}
+    h1 {text-align: center; margin-top: 1.8rem;}
+    button {display: block; float: left; margin: 24px; padding:18px; background-color: #2c4d5f; color:aliceblue; outline: 0; border: 0; border-radius: 14px; cursor: pointer;}
+    img { width: 100px; height: auto;}
+    </style>
+    <!--lst li display : none; 처리가 되어있어야 애니메이션으로 보여줄 수 있다-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js">        
+    $(document).ready(function(){
+   
+    });
+    </script>
+</head>
+<body>
+    <section class="comment">
+        <h1>FadeTo()  </h1>
+        <p></p>
+        <article class="data">
+            <div class="btnFrame">
+                <button id="btn1">보이기 버튼</button>
+                <button id="btn2">숨기기 버튼</button>
+                <button id="btn3">토글 버튼</button>
+            </div>
+            <ul class="lst">
+                <li><img src="./img/good.jpg" alt="hc"></li>
+                <li><img src="./img/good2.jpeg" alt="hc2"></li>
+                <li><img src="./img/good3.jpeg" alt="hc3"></li>
+            </ul>
+            <div class="txt">버튼을 누르면, 효과가 실행됩니다</div>
+        </article>
+    </section>
+    <br><hr><br>
+    </div>
+</body>
+</html>

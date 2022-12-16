@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 22 - </title>
+    <script src="./jquery.min.js"></script>
+</head>
+<body>
+    <section class="container">
+        <h1>기본 메소드 - text(), html() </h1>
+        <article class="data">
+            <p><b> 저기 사라진 </b> 별의 자리 <span id="tag"> 아스라이 </span></p>
+            <p> 하얀 빛 <span id="text"> 한동안은 </span> 꺼내 볼 수 있을 거야 </p>
+            <p> 아낌없이 <button name="oktbtn"> 반짝인 </button>  시간은 </p>
+            <div id="console"></div>
+        </article>
+    </section> <br><hr><br>
+    <script>
+        $(document).ready(function(){
+            var sw = true;
+            //p 요소를 클릭하면, 클릭된 요소의 태그를 포함하여 아이디가 console인 곳에 텍스트 형태로 출력함
+            $("p").click(function(){
+                $("#console").html($(this).html());
+            });
+        });
+    </script>
+</body>
+</html>
