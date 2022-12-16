@@ -17,7 +17,7 @@
     #visual a { display: block; width: 400px; height: 600px; float: left; position: relative;}
     #visual img { display: block; width: 400px; height: auto;}
     .num {display: block; color: black; background: pink; border-radius: 20px; width: 40px; height: 40px; position: absolute; z-index: 10; top: 20px; left: 20px; text-align: center; line-height: 40px;}
-    #btn_box { width: 400px; height: 30px; margin: 0px auto;}
+    #btn_box { width: 400px; height: 30px; margin: 0px auto; margin-top: -150px;}
     #btn_box a {display: block; width: 30px; height: 30px; cursor: pointer;} 
     #btn_box .left { float: left; }
     #btn_box .right { float: right; }
@@ -29,7 +29,7 @@
         var wd = $("#visual").width();
         $(".img_box a").each(function(index){
             $(this).find(".num").text(index+1);
-            $("#num_box").append("<span>"+(index+1)"</span>")
+            $("#num_box").append("<span>"+(index+1)+"</span>")
         });
         $("#btn_box .left").click(function(){
             var ml = parseInt($(".img_box").css("margin-left"));
@@ -69,7 +69,10 @@
                     <img src="./img/good4.jpg" alt="">
                     <span class="num"></span>
                 </a>
-            </div>        
+            </div>      
+            </section>
+            <section id="btn_box">
+                <a class="left">◀</a><a class="right">▶</a>
             </section>
         </article>
     </section>

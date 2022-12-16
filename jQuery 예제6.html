@@ -26,7 +26,13 @@
     </style>
     <script>
     $(document).ready(function(){
-//순환형(Loop) 타입의 배너 슬라이더를 완성하되, 자동으로 3초 마다 슬라이딩이 될 수 있도록 하시오.
+    setInterval(fnSlide, 3000);
+    function fnSlide() {
+        $(".img_box").animate({ "margin-left": "-=200px"}, "slow");
+    }
+//순환형(Loop) 타입의 배너 슬라이더를 완성하되, 
+
+//자동으로 3초 마다 슬라이딩이 될 수 있도록 하시오.
     });
 </script>
 </head>
