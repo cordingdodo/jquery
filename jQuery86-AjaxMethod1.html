@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 85 : Ajax setup  </title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script> 
+    <style>
+    .container { clear:both; width:1000px; margin:20px auto; } 
+    .container:after { content:""; display:block; clear:both; }
+    .data { clear: both; }
+    .data:after { content:""; display:block; clear:both; } 
+    </style>
+    <script>
+    /*ajax*/
+    </script>
+</head>
+<body>
+    <article class="data">
+        <div><h2>jQuery86 Ajax Data Trans</h2></div>
+        <input type="text" id="id" name="id" placeholder="id 입력" autofocus>
+        <button type="button"></button>
+        <div id="result"></div>
+    </article>
+    <br><hr><br>
+    <script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $.ajaxSetup({url: "text.txt",
+                success: function(result) {
+                    $("#result").html(result);
+                }
+            });
+            //전송 받기 전의 해당 파일과 전송에 관한 정보를 객체에 저장하기
+            var currentRequests = {} ;
+            $.ajaxPrefilter(function(options, originalOptions, jqXHR) { 
+            
+            //전송 객체를 생성 - 이미지 객체를 생성
+            $.ajaxTransport("image", function(s) {
+            $.ajax();
+        });
+        });
+        });   
+    });
+    </script>
+</body>
+</html>

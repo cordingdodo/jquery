@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 85 : Ajax setup  </title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script> 
+    <style>
+    .container { clear:both; width:1000px; margin:20px auto; } 
+    .container:after { content:""; display:block; clear:both; }
+    .data { clear: both; }
+    .data:after { content:""; display:block; clear:both; } 
+    </style>
+    <script>
+    /*ajax 는 텍스트파일 못 받아옴 
+    json ajax 자바스크립트 등등..
+    but 텍스트를 받아오려면 setup을 이용해야 한다*/
+    </script>
+</head>
+<body>
+    <article class="container">
+        <div><h2>jQuery84 Ajax setup</h2></div>
+        <button type="button" id="btn1">데이터 받아오기</button>
+        <div id="result"></div>
+    </article>
+    <br><hr><br>
+    <script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $.ajaxSetup({url: "text.txt",
+                success: function(result) {
+                    $("#result").html(result);
+                }
+            });
+            //전송 받기 전의 해당 파일과 전송에 관한 정보를 객체에 저장하기
+            var currentRequests = {} ;
+            $.ajaxPrefilter(function(options, originalOptions, jqXHR) { 
+            
+            //전송 객체를 생성 - 이미지 객체를 생성
+            $.ajaxTransport("image", function(s) {
+            $.ajax();
+        });
+        });
+        });   
+    });
+    </script>
+</body>
+</html>
